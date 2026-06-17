@@ -1,61 +1,78 @@
 # 📊 Data Insight AI
 
-Projeto desenvolvido para estudar **Análise de Dados**, **Python** e conceitos de **Inteligência Artificial**.
+Projeto de análise de dados com Python e Streamlit, que transforma dados de vendas em insights automáticos e visualizações interativas.
 
-## 🚀 Funcionalidades Atuais
+---
 
-✅ Leitura de arquivos CSV
+## 🚀 Resumo
 
-✅ Exibição dos dados em tabela
+O projeto analisa um conjunto de dados de vendas mensais e gera:
 
-✅ Cálculo de estatísticas básicas:
+- 📈 Estatísticas automáticas
+- 📊 Gráfico de evolução
+- 📄 Relatório em arquivo
+- 🌐 Dashboard interativo
 
-* 📈 Média
-* 🔝 Maior valor
-* 🔻 Menor valor
+---
 
-## 🛠️ Tecnologias Utilizadas
+## 🧠 Funcionalidades
 
-* 🐍 Python
-* 🐼 Pandas
-* 🌿 Git
-* 🐙 GitHub
+- Leitura de dados CSV com Pandas
+- Cálculo de métricas:
+  - Média
+  - Maior valor
+  - Menor valor
+- Identifica:
+  - Melhor mês
+  - Pior mês
+  - Tendência de crescimento
+- Geração de relatório automático (.txt)
+- Interface web com Streamlit
+- Visualização gráfica com Matplotlib
 
-## 📁 Estrutura do Projeto
+---
+
+## 🛠️ Tecnologias
+
+- Python
+- Pandas
+- Matplotlib
+- Streamlit
+- Git & GitHub
+
+---
+
+## 📊 Como executar o projeto
+
+```bash
+# instalar dependências
+pip install -r requirements.txt
+
+# rodar versão terminal
+python main.py
+
+# rodar dashboard web
+python -m streamlit run app.py
+```
+
+---
+
+## 📂 Estrutura do projeto
 
 ```text
 data-insight-ai/
 │
-├── data/
-│   └── vendas.csv
-│
-├── .gitignore
-├── main.py
+├── app.py              # dashboard Streamlit
+├── main.py             # versão análise em terminal
+├── data/               # dados CSV
+├── relatorio.txt       # relatório gerado
+├── requirements.txt    # dependências
 └── README.md
 ```
 
-## 🎯 Objetivo
+---
 
-Criar uma ferramenta capaz de analisar dados automaticamente e gerar insights úteis para tomada de decisão.
+## 🚀 Status
 
-## 🔮 Próximos Passos
-
-* 📊 Geração de gráficos
-* 🤖 Insights automáticos
-* 🧠 Integração com Inteligência Artificial
-* 🌐 Interface Web
-* 📄 Relatórios automáticos
-
-## 📚 Aprendizados
-
-Este projeto faz parte da minha jornada de aprendizado em:
-
-* Engenharia de Software
-* Ciência de Dados
-* Python
-* Git e GitHub
-* Inteligência Artificial
-
-## ⭐ Status
-
-🚧 Em desenvolvimento
+- ✔ Projeto funcional  
+- 🚧 Em evolução

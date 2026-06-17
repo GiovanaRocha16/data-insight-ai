@@ -1,0 +1,12 @@
+RELATÓRIO DE VENDAS
+
+=== ESTATÍSTICAS ===
+Média: 1280.0
+Maior venda: 1800
+Menor venda: 900
+
+=== INSIGHTS ===
+Melhor mês: Mai
+Pior mês: Mar
+
+Variação no período: 80.00%
