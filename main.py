@@ -24,6 +24,28 @@ def plotar_grafico(dados):
     plt.ylabel("Vendas")
     plt.show()
 
+def calcular_variacao(dados):
+    primeira = dados["Vendas"].iloc[0]
+    ultima = dados["Vendas"].iloc[-1]
+    return ((ultima - primeira) / primeira) * 100
+
+def gerar_insight(media, maior, menor, variacao):
+    if variacao > 0:
+        tendencia = "crescimento 📈"
+    else:
+        tendencia = "queda 📉"
+
+    insight = f"""
+Resumo Inteligente dos Dados:
+
+- A média de vendas foi {media:.2f}
+- A maior venda foi {maior}
+- A menor venda foi {menor}
+- O período apresentou {tendencia}
+- Variação total: {variacao:.2f}%
+
+"""
+    return insight
 
 def main():
     dados = carregar_dados()
@@ -39,10 +61,7 @@ def main():
     print("Melhor mês:", mes_maior)
     print("Pior mês:", mes_menor)
 
-    primeira = dados["Vendas"].iloc[0]
-    ultima = dados["Vendas"].iloc[-1]
-
-    variacao = ((ultima - primeira) / primeira) * 100
+    variacao = calcular_variacao(dados)
 
     if variacao > 0:
         print(f"\n📈 Crescimento de {variacao:.2f}% no período")
@@ -63,6 +82,12 @@ def main():
         f.write(f"Pior mês: {mes_menor}\n\n")
 
         f.write(f"Variação no período: {variacao:.2f}%\n")
+
+    insight = gerar_insight(media, maior, menor, variacao)
+
+    print("\n🤖 IA DE INSIGHTS")
+    print(insight)
+
 
 if __name__ == "__main__":
     main()
